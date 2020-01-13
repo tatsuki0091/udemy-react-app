@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { increment, decrement } from '../actions'
 import { dispatch } from 'rxjs/internal/observable/range';
 
-class App extends Component {
+class EventsIndex extends Component {
 
   render() {
     const props = this.props
@@ -25,4 +25,4 @@ const mapDispatchToProps = dispatch => ({
   decrement: () => dispatch(decrement()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(EventsIndex)
