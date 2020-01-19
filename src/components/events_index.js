@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import _ from 'lodash'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { readEvents } from '../actions'
 //import { dispatch } from 'rxjs/internal/observable/range';
@@ -27,9 +28,8 @@ class EventsIndex extends Component {
   }
     
   render() {
-    const props = this.props
-
     return (
+      <React.Fragment>
       <table>
         <thead>
           <tr>
@@ -43,6 +43,9 @@ class EventsIndex extends Component {
           {this.renderEvents()}
         </tbody>
       </table>
+
+      <Link to="/events/new">New Event</Link>
+      </React.Fragment>
     )
   }
 }
